@@ -1,0 +1,26 @@
+version: '3'
+
+services:
+  app:
+    env_file: .env
+    build:
+      context: .
+    volumes:
+      - .:/var/www/html
+    ports:
+      - 8888:80
+    depends_on:
+      - db
+    links:
+      - db
+
+  db:
+    env_file: .env
+    image: mysql
+    restart: always
+
+  adminer:
+    image: adminer
+    restart: always
+    ports:
+      - 8080:8080

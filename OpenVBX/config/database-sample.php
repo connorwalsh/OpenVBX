@@ -40,7 +40,7 @@
 $active_group = "default";
 $active_record = TRUE;
 
-$db["default"]["hostname"] = "localhost:8889";
+$db["default"]["hostname"] = "db:33060";
 $db["default"]["username"] = "root";
 $db["default"]["password"] = "root";
 $db["default"]["database"] = "OpenVBX";
